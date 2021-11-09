@@ -9,12 +9,9 @@ import {
   useColorScheme
 } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-import { replyToQuiz } from '../controllers/quiz/actions';
-
-const FinalResult = ({ navigation }) => {
-  const dispatch = useDispatch();
+const FinalResult = () => {
   const answers = useSelector((state) => state.quiz.answers);
   const isDarkMode = useColorScheme() === 'dark';
 
